@@ -1,0 +1,14 @@
+[alias]
+       co = checkout
+       br = branch
+       s = status
+       ls = log --oneline
+       cm = commit
+       fs = flow feature start
+       ff = flow feature finish
+       hs = flow hotfix start
+       hf = flow hotfix finish
+       rs = flow release start
+       rf = flow release finish
+       cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+       rm-merged = "git fetch --prune && git branch --merged=origin/develop|grep "\b/\b"|xargs git branch -d"
